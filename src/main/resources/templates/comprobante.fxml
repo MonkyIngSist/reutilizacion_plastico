@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="770.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hjappscode.recoleccion_basura.controlador.ComprobanteControlador">
+   <children>
+      <Label alignment="CENTER" layoutX="378.0" layoutY="26.0" prefHeight="35.0" prefWidth="244.0" text="Factura">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font></Label>
+      <TextField fx:id="txtRucEmpresa" layoutX="14.0" layoutY="96.0" prefHeight="26.0" prefWidth="252.0" promptText="RUC: EJM. 2023203030" />
+      <TextField fx:id="txtIdPedido" layoutX="14.0" layoutY="163.0" prefHeight="26.0" prefWidth="252.0" promptText="ID. PEDIDO" />
+      <Button fx:id="btnGenerar" layoutX="556.0" layoutY="715.0" mnemonicParsing="false" onAction="#savePaneAsPDF" prefHeight="26.0" prefWidth="132.0" text="Generar" />
+      <Pane fx:id="pnPanelFactura" layoutX="315.0" layoutY="89.0" prefHeight="611.0" prefWidth="605.0">
+         <children>
+            <Label fx:id="lblRUC" layoutX="163.0" layoutY="75.0" prefWidth="145.0" text="RUC" />
+            <Label fx:id="lblNombre" layoutX="163.0" layoutY="104.0" prefHeight="17.0" prefWidth="261.0" text="Nombre Empresa" />
+            <Label layoutX="24.0" layoutY="72.0" prefHeight="99.0" prefWidth="121.0" text="LOGO" />
+            <Label fx:id="lblDireccion" layoutX="163.0" layoutY="137.0" prefHeight="17.0" prefWidth="329.0" text="DIRECCION" />
+            <Label layoutX="24.0" layoutY="171.0" prefHeight="17.0" prefWidth="554.0" text="-------------------------------------------------------------------------------------------------------------------" />
+            <DatePicker layoutX="389.0" layoutY="133.0" />
+            <Label layoutX="19.0" layoutY="299.0" prefHeight="17.0" prefWidth="569.0" text="--------------------------------------------------------------------------------------------------------------------" />
+            <Label layoutX="24.0" layoutY="209.0" prefHeight="17.0" prefWidth="132.0" text="RUC" />
+            <Label layoutX="24.0" layoutY="238.0" prefHeight="17.0" prefWidth="132.0" text="Nombre Empresa" />
+            <Label layoutX="24.0" layoutY="271.0" prefHeight="17.0" prefWidth="132.0" text="DIRECCION" />
+            <Label alignment="CENTER" layoutX="8.0" layoutY="14.0" prefHeight="35.0" prefWidth="416.0" text="COMPROBANTE ELECTRONICO">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="410.0" layoutY="49.0" prefHeight="35.0" prefWidth="132.0" text="NUMERO">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="438.0" layoutY="87.0" prefHeight="35.0" prefWidth="77.0" text="N">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <TableView fx:id="tblPedido" layoutX="28.0" layoutY="335.0" prefHeight="144.0" prefWidth="554.0">
+              <columns>
+                <TableColumn fx:id="colId" prefWidth="79.0" text="ID" />
+                <TableColumn fx:id="colTipoPedido" prefWidth="105.20001220703125" text="TIPO PEDIDO" />
+                  <TableColumn fx:id="colPeso" prefWidth="154.800048828125" text="PESO PEDIDO" />
+                  <TableColumn fx:id="colPrecio" prefWidth="104.00006103515625" text="PRECIO" />
+                  <TableColumn fx:id="colCamion" prefWidth="99.5999755859375" text="CAMION" />
+              </columns>
+            </TableView>
+            <Label fx:id="rucExterno" layoutX="156.0" layoutY="207.0" prefHeight="17.0" prefWidth="132.0" text="RUC" />
+            <Label fx:id="nombreExterno" layoutX="156.0" layoutY="236.0" prefHeight="17.0" prefWidth="132.0" text="Nombre Empresa" />
+            <Label fx:id="direccionExterno" layoutX="156.0" layoutY="269.0" prefHeight="17.0" prefWidth="132.0" text="DIRECCION" />
+         </children>
+      </Pane>
+      <Button fx:id="btnBuscar" layoutX="88.0" layoutY="221.0" mnemonicParsing="false" onAction="#enlisarPedido" prefHeight="25.0" prefWidth="104.0" text="BUSCAR" />
+      <Button fx:id="btnRegresar" layoutX="462.0" layoutY="716.0" mnemonicParsing="false" onAction="#regresarGeneral" text="&lt;--" />
+   </children>
+</AnchorPane>

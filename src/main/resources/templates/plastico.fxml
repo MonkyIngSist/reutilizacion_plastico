@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="770.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hjappscode.recoleccion_basura.controlador.PlasticoControlador">
+   <children>
+      <BorderPane prefHeight="770.0" prefWidth="1000.0">
+         <right>
+            <Pane prefHeight="597.0" prefWidth="690.0" BorderPane.alignment="CENTER">
+               <children>
+                  <TableView fx:id="tblPlastico" layoutX="15.0" layoutY="48.0" onMouseClicked="#cargarInformacionPlastico" prefHeight="250.0" prefWidth="542.0">
+                    <columns>
+                      <TableColumn fx:id="colIdPlastico" prefWidth="35.199951171875" text="ID" />
+                      <TableColumn fx:id="colTipoPlastico" prefWidth="58.79998779296875" text="TIPO" />
+                        <TableColumn fx:id="colFechaPlastico" prefWidth="91.60002899169922" text="FECHA" />
+                        <TableColumn fx:id="colPesoPlastico" prefWidth="68.4000244140625" text="PESO" />
+                        <TableColumn fx:id="colObservacionPlastico" prefWidth="109.20001220703125" text="Observaciones" />
+                        <TableColumn fx:id="colLugarPlastico" prefWidth="91.5999755859375" text="LUGAR" />
+                        <TableColumn fx:id="colIdCamion" prefWidth="77.00003051757812" text="CAMION" />
+                    </columns>
+                  </TableView>
+                  <TableView fx:id="tblCamion" layoutX="15.0" layoutY="344.0" onMouseClicked="#cargarInformacionCamion" prefHeight="236.0" prefWidth="543.0">
+                     <columns>
+                        <TableColumn fx:id="colIdCamion1" prefWidth="75.0" text="ID" />
+                        <TableColumn fx:id="colColorCamion" prefWidth="75.0" text="COLOR" />
+                        <TableColumn fx:id="colNombreCamion" prefWidth="75.0" text="Nombre" />
+                        <TableColumn fx:id="colMarcaCamion" prefWidth="75.0" text="MARCA" />
+                        <TableColumn fx:id="colPlacaCamion" prefWidth="75.0" text="PLACA" />
+                     </columns>
+                  </TableView>
+                  <Label layoutX="138.0" layoutY="13.0" text="Plasticos">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="83.0" layoutY="308.0" text="Camiones disponibles">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+               </children></Pane>
+         </right>
+         <center>
+            <Pane prefHeight="597.0" prefWidth="381.0" BorderPane.alignment="CENTER">
+               <children>
+                  <TextField fx:id="txtPesoPlastico" layoutX="36.0" layoutY="125.0" prefHeight="54.0" prefWidth="212.0" promptText="PESO">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="txtCamion" layoutX="36.0" layoutY="208.0" prefHeight="54.0" prefWidth="212.0" promptText="Camion" />
+                  <TextField fx:id="txtTipoPlastico" layoutX="37.0" layoutY="42.0" prefHeight="54.0" prefWidth="210.0" promptText="Tipo de plastico">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="txtPrecio" layoutX="36.0" layoutY="298.0" prefHeight="54.0" prefWidth="212.0" promptText="PRECIO" />
+                  <Button fx:id="btnConfirmar" layoutX="70.0" layoutY="386.0" mnemonicParsing="false" onAction="#agregarProducto" prefHeight="58.0" prefWidth="150.0" text="CONFIRMAR">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnLimpiar" layoutX="67.0" layoutY="480.0" mnemonicParsing="false" onAction="#limpiarPedido" prefHeight="58.0" prefWidth="150.0" text="LIMPIAR DATOS">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Button>
+               </children></Pane>
+         </center>
+         <top>
+            <Label prefHeight="68.0" prefWidth="205.0" text="GESTION BASURA" BorderPane.alignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font></Label>
+         </top>
+         <bottom>
+            <Pane prefHeight="105.0" prefWidth="1000.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Button fx:id="btnRetroceder" layoutX="96.0" layoutY="24.0" mnemonicParsing="false" onAction="#regresarGeneral" prefHeight="58.0" prefWidth="150.0" text="&lt;--" />
+               </children></Pane>
+         </bottom>
+         <left>
+            <Pane prefHeight="535.0" prefWidth="19.0" BorderPane.alignment="CENTER" />
+         </left></BorderPane>
+   </children>
+</AnchorPane>

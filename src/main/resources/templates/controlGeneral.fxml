@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="770.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hjappscode.recoleccion_basura.controlador.ControlGeneralControlador">
+   <children>
+      <TableView fx:id="tblPedido" layoutX="188.0" layoutY="122.0" prefHeight="640.0" prefWidth="803.0">
+        <columns>
+          <TableColumn fx:id="idPedido" prefWidth="65.79998779296875" text="ID" />
+            <TableColumn fx:id="tipoPedido" prefWidth="134.79998779296875" text="TIPO PEDIDO" />
+          <TableColumn fx:id="fechaPedido" prefWidth="183.5999755859375" text="Fecha Pedido" />
+            <TableColumn fx:id="pesoPedido" prefWidth="121.60003662109375" text="PESO" />
+            <TableColumn fx:id="precioPedido" minWidth="0.0" prefWidth="139.60003662109375" text="PRECIO" />
+            <TableColumn fx:id="vendidosn" minWidth="0.0" prefWidth="153.199951171875" text="VENDIDO?" />
+        </columns>
+      </TableView>
+      <Button fx:id="btnVentanaEmpleados" layoutX="29.0" layoutY="246.0" mnemonicParsing="false" onAction="#ventanaEmpleados" prefHeight="26.0" prefWidth="128.0" text="Empleados" />
+      <Button layoutX="29.0" layoutY="278.0" mnemonicParsing="false" onAction="#ventanaFactura" prefHeight="26.0" prefWidth="128.0" text="Facturas" />
+      <Button layoutX="29.0" layoutY="312.0" mnemonicParsing="false" onAction="#ventanaPlasticos" prefHeight="26.0" prefWidth="128.0" text="Plasticos" />
+      <Button layoutX="29.0" layoutY="346.0" mnemonicParsing="false" onAction="#ventanaCamion" prefHeight="26.0" prefWidth="128.0" text="Camion" />
+      <Label alignment="CENTER" layoutX="331.0" layoutY="25.0" prefHeight="18.0" prefWidth="337.0" text="Control de plasticos generales" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="441.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hjappscode.recoleccion_basura.controlador.CamionControlador">
+   <children>
+      <Label layoutX="242.0" layoutY="23.0" prefHeight="18.0" prefWidth="116.0" text="Camion" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="44.0" layoutY="70.0" text="Marca" />
+      <Label layoutX="44.0" layoutY="165.0" text="Placa" />
+      <Label layoutX="44.0" layoutY="204.0" text="Peso maximo" />
+      <Label layoutX="45.0" layoutY="253.0" text="Color" />
+      <TextField fx:id="txtMarca" layoutX="152.0" layoutY="66.0" />
+      <TextField fx:id="txtPlaca" layoutX="152.0" layoutY="161.0" />
+      <TextField fx:id="txtPesoMax" layoutX="153.0" layoutY="200.0" />
+      <TextField fx:id="txtColor" layoutX="153.0" layoutY="249.0" />
+      <TableView fx:id="tblCamion" layoutX="321.0" layoutY="60.0" onMouseClicked="#cargarInformacionFormulario" prefHeight="254.0" prefWidth="657.0">
+        <columns>
+          <TableColumn fx:id="colId" prefWidth="75.0" text="ID" />
+          <TableColumn fx:id="colNombre" prefWidth="95.20001220703125" text="NOMBRE" />
+            <TableColumn fx:id="colPlaca" prefWidth="86.39996337890625" text="PLACA" />
+            <TableColumn fx:id="colMarca" prefWidth="103.4000244140625" text="MARCA" />
+            <TableColumn fx:id="colColor" prefWidth="73.00006103515625" text="COLOR" />
+            <TableColumn fx:id="colPesoMax" prefWidth="91.199951171875" text="PESO MAX" />
+            <TableColumn fx:id="colEmpleado" prefWidth="121.60009765625" text="EMPLEADO" />
+        </columns>
+      </TableView>
+      <Button fx:id="btnAgregar" layoutX="501.0" layoutY="346.0" mnemonicParsing="false" onAction="#agregarCamion" prefHeight="26.0" prefWidth="129.0" text="AGREGAR" />
+      <Button fx:id="btnEliminar" layoutX="667.0" layoutY="347.0" mnemonicParsing="false" onAction="#eliminarCamion" prefHeight="26.0" prefWidth="130.0" text="ELIMINAR" />
+      <Button fx:id="btnModificar" layoutX="824.0" layoutY="348.0" mnemonicParsing="false" onAction="#modificarCamion" prefHeight="26.0" prefWidth="130.0" text="MODIFICAR" />
+      <Button fx:id="btnRegresar" layoutX="344.0" layoutY="347.0" mnemonicParsing="false" onAction="#regresarVentanaPrincipal" prefHeight="26.0" prefWidth="129.0" text="&lt;--" />
+      <Label layoutX="44.0" layoutY="118.0" text="Nombre" />
+      <TextField fx:id="txtNombre" layoutX="152.0" layoutY="114.0" />
+      <ComboBox fx:id="cbxEmpleado" layoutX="153.0" layoutY="302.0" prefWidth="150.0" promptText="Seleccione Empleado" />
+      <Label layoutX="44.0" layoutY="306.0" text="Empleado" />
+   </children>
+</AnchorPane>

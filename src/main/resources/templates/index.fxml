@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="770.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hjappscode.recoleccion_basura.controlador.IndexControlador">
+   <children>
+      <Label layoutX="461.0" layoutY="99.0" prefHeight="34.0" prefWidth="189.0" text="BIENVENIDO" textAlignment="CENTER">
+         <font>
+            <Font name="Arial" size="29.0" />
+         </font>
+      </Label>
+      <PasswordField fx:id="txtPassword" layoutX="505.0" layoutY="267.0" prefHeight="26.0" prefWidth="206.0" promptText="******" />
+      <Label layoutX="400.0" layoutY="271.0" text="CONTRASENA" />
+      <Label layoutX="411.0" layoutY="203.0" text="USUARIO" />
+      <Button fx:id="btnIngresar" layoutX="469.0" layoutY="337.0" mnemonicParsing="false" onAction="#handleLogin" text="INGRESAR" />
+      <TextField fx:id="txtUsuario" layoutX="505.0" layoutY="199.0" prefHeight="26.0" prefWidth="205.0" promptText="junior021" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<?import javafx.collections.FXCollections?>
+<?import java.lang.String?>
+<AnchorPane prefHeight="770.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hjappscode.recoleccion_basura.controlador.EmpleadosControlador">
+   <children>
+      <BorderPane prefHeight="770.0" prefWidth="1000.0">
+         <bottom>
+            <Pane prefHeight="103.0" prefWidth="1000.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Button fx:id="eliminarEmpleado" contentDisplay="CENTER" layoutX="375.0" layoutY="33.0" mnemonicParsing="false" onAction="#eliminarEmp" prefHeight="37.0" prefWidth="124.0" text="ELIMINAR" textAlignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font></Button>
+                  <Button fx:id="modificarEmpleado" contentDisplay="CENTER" layoutX="591.0" layoutY="33.0" mnemonicParsing="false" onAction="#modificarEmp" prefHeight="37.0" prefWidth="124.0" text="MODIFICAR" textAlignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font></Button>
+                  <Button fx:id="agregarEmpleado" contentDisplay="CENTER" layoutX="162.0" layoutY="33.0" mnemonicParsing="false" onAction="#agregarEmp" prefHeight="37.0" prefWidth="124.0" text="AGREGAR" textAlignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font></Button>
+                  <Button fx:id="btnRegresar" layoutX="79.0" layoutY="33.0" mnemonicParsing="false" onAction="#regresarVentanaPrincipal" prefHeight="37.0" prefWidth="37.0" text="" />
+                  <Button fx:id="limpiarEmpleado" layoutX="788.0" layoutY="34.0" mnemonicParsing="false" onAction="#limpiarEmp" prefHeight="36.0" prefWidth="144.0" text="LIMPIOR CAMPOS" />
+               </children>
+            </Pane>
+         </bottom>
+         <top>
+            <Label prefHeight="48.0" prefWidth="123.0" text="Empleados" BorderPane.alignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+         </top>
+         <center>
+            <TableView fx:id="tblEmpleados" onMouseClicked="#cargarInformacionFormulario" prefHeight="466.0" prefWidth="552.0">
+              <columns>
+                <TableColumn fx:id="idEmpleado" prefWidth="36.19993436336517" text="ID" />
+                <TableColumn fx:id="nombreEmpleado" prefWidth="84.39996337890625" text="Nombre" />
+                  <TableColumn fx:id="apellidosEmpleado" prefWidth="122.40003204345703" text="Apellidos" />
+                  <TableColumn fx:id="telefonoEmpleado" minWidth="0.0" prefWidth="75.0" text="Telefono" />
+                  <TableColumn fx:id="correoEmpleado" prefWidth="141.79998779296875" text="Correo" />
+                  <TableColumn fx:id="direccionEmpleado" prefWidth="123.00003051757812" text="Direccion" />
+                  <TableColumn fx:id="rolEmpleado" prefWidth="92.199951171875" text="Rol" />
+                  <TableColumn fx:id="estadoEmpleado" prefWidth="80.199951171875" text="Estado" />
+              </columns>
+               <BorderPane.margin>
+                  <Insets />
+               </BorderPane.margin>
+            </TableView>
+         </center>
+         <left>
+            <Pane fx:id="txtApellidos" prefHeight="466.0" prefWidth="222.0" BorderPane.alignment="CENTER">
+               <children>
+                  <TextField fx:id="txtNombre" layoutX="14.0" layoutY="48.0" prefHeight="25.0" prefWidth="194.0" promptText="Nombre" />
+                  <TextField fx:id="txtApellido" layoutX="14.0" layoutY="81.0" prefHeight="25.0" prefWidth="194.0" promptText="Apellidos" />
+                  <TextField fx:id="txtTelefono" layoutX="14.0" layoutY="114.0" prefHeight="25.0" prefWidth="194.0" promptText="Telefono Ejm. 902541745" />
+                  <TextField fx:id="txtCorreo" layoutX="14.0" layoutY="151.0" prefHeight="25.0" prefWidth="194.0" promptText="Correo" />
+                  <TextField fx:id="txtDireccion" layoutX="14.0" layoutY="186.0" prefHeight="25.0" prefWidth="194.0" promptText="Direccion" />
+                  <Label alignment="CENTER" layoutX="32.0" layoutY="14.0" prefHeight="17.0" prefWidth="157.0" text="Rellenar Datos" textAlignment="CENTER" />
+                  <ComboBox fx:id="cbxRol" layoutX="14.0" layoutY="220.0" prefHeight="25.0"
+                            prefWidth="194.0" promptText="Seleccionar Rol">
+                     <items>
+                        <FXCollections fx:factory="observableArrayList">
+                         <String fx:value="Seleccionar Rol"/>
+                           <String fx:value="Camionero"/>
+                           <String fx:value="Separador"/>
+                         <String fx:value="Recolectores"/>
+                           <String fx:value="Administrador"/>
+                       </FXCollections>
+                     </items>
+                  </ComboBox>
+
+                  <ComboBox fx:id="cbxEstado" layoutX="14.0" layoutY="258.0" prefHeight="25.0"
+                            prefWidth="195.0" promptText="Seleccionar Estado">
+                     <items>
+                        <FXCollections fx:factory="observableArrayList">
+                           <String fx:value="Seleccionar Estado"/>
+                           <String fx:value="Activo"/>
+                           <String fx:value="No activo"/>
+                           <String fx:value="Despedido"/>
+                           <String fx:value="A prueba"/>
+                        </FXCollections>
+                     </items>
+                  </ComboBox>
+               </children></Pane>
+         </left>
+         <right>
+            <Pane prefHeight="466.0" prefWidth="16.0" BorderPane.alignment="CENTER" />
+         </right></BorderPane>
+   </children>
+</AnchorPane>
